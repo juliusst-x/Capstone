@@ -19,11 +19,11 @@ class UserProfileController extends Controller
             'firstname' => ['max:100'],
             'lastname' => ['max:100'],
             'email' => ['required', 'email', 'max:255',  Rule::unique('users')->ignore(auth()->user()->id),],
-            'address' => ['max:100'],
-            'city' => ['max:100'],
-            'country' => ['max:100'],
-            'postal' => ['max:100'],
-            'about' => ['max:255']
+            // 'address' => ['max:100'],
+            // 'city' => ['max:100'],
+            // 'country' => ['max:100'],
+            // 'postal' => ['max:100'],
+            // 'about' => ['max:255']
         ]);
 
         auth()->user()->update([
@@ -31,11 +31,11 @@ class UserProfileController extends Controller
             'firstname' => $request->get('firstname'),
             'lastname' => $request->get('lastname'),
             'email' => $request->get('email') ,
-            'address' => $request->get('address'),
-            'city' => $request->get('city'),
-            'country' => $request->get('country'),
-            'postal' => $request->get('postal'),
-            'about' => $request->get('about')
+            // 'address' => $request->get('address'),
+            // 'city' => $request->get('city'),
+            // 'country' => $request->get('country'),
+            // 'postal' => $request->get('postal'),
+            // 'about' => $request->get('about')
         ]);
         return back()->with('succes', 'Profile succesfully updated');
     }
