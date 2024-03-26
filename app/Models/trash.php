@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class trash extends Model
 {
     use HasFactory;
+
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'location',
+        'type',
+        'qty',
+        'user_id'
+    ];
 }

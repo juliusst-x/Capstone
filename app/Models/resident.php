@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class resident extends Model
 {
     use HasFactory;
+
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'username',
+        'password',
+        'no_telp',
+        'group_id',
+        'house_id',
+        'status',
+        'email'
+    ];
 }
